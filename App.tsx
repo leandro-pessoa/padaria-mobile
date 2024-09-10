@@ -1,18 +1,19 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
+// componentes
 import React from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { Text } from 'react-native';
+import { Provider } from 'react-redux';
+import { StyledSafeAreaView } from './styles/StyledSafeAreaView';
+
+// store
+import { store } from './features/store';
 
 const App = () => {
     return (
-        <SafeAreaView>
-            <Text>Hello world!</Text>
-        </SafeAreaView>
+        <Provider store={store}>
+          <StyledSafeAreaView>
+              <Text>Hello world!</Text>
+          </StyledSafeAreaView>
+        </Provider>
     );
 };
 
