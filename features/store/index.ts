@@ -3,10 +3,14 @@ import { configureStore } from '@reduxjs/toolkit';
 
 // reducers
 import { productReducer } from '../reducers/product';
+import { generalReducer } from '../reducers/general';
 
 // declaração da store
 export const store = configureStore({
-    reducer: productReducer,
+    reducer: {
+        product: productReducer,
+        general: generalReducer,
+    },
 });
 
 // exports das tipagens necessárias

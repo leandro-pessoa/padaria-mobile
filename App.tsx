@@ -1,19 +1,27 @@
 // componentes
 import React from 'react';
-import { Text } from 'react-native';
-import { Provider } from 'react-redux';
 import { StyledSafeAreaView } from './styles/StyledSafeAreaView';
+import { ThemeProvider } from 'styled-components';
 
-// store
-import { store } from './features/store';
+// temas
+import { darkTheme, lightTheme } from './components/Theme';
+
+// funções
+import { useAppSelector } from './features/hooks';
+
+// states globais
+import { selectTheme } from './features/reducers/general';
+import ActionBar from './components/ActionBar';
 
 const App = () => {
+    const theme = useAppSelector(selectTheme);
+
     return (
-        <Provider store={store}>
-          <StyledSafeAreaView>
-              <Text>Hello world!</Text>
-          </StyledSafeAreaView>
-        </Provider>
+            <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+                <StyledSafeAreaView>
+                    <ActionBar />
+                </StyledSafeAreaView>
+            </ThemeProvider>
     );
 };
 
