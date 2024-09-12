@@ -11,7 +11,10 @@ import { useAppSelector } from './features/hooks';
 
 // states globais
 import { selectTheme } from './features/reducers/general';
-import ActionBar from './components/ActionBar';
+import Header from './components/Header';
+import NavBar from './components/NavBar';
+import Banner from './components/Banner';
+import Products from './components/Products';
 
 const App = () => {
     const theme = useAppSelector(selectTheme);
@@ -19,7 +22,10 @@ const App = () => {
     return (
             <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
                 <StyledSafeAreaView>
-                    <ActionBar />
+                    <Header />
+                    <Banner />
+                    <Products />
+                    <NavBar />
                 </StyledSafeAreaView>
             </ThemeProvider>
     );

@@ -3,7 +3,7 @@ import { StyledView, Title } from './styles';
 import React from 'react';
 import ThemeButton from './ThemeButton';
 
-const ActionBar = () => {
+const Header = () => {
     return (
         <StyledView>
             <Title>PadariaApp</Title>
@@ -12,4 +12,4 @@ const ActionBar = () => {
     );
 };
 
-export default ActionBar;
+export default Header;

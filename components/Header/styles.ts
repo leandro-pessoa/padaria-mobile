@@ -10,6 +10,7 @@ const StyledView = styled.View`
     width: 100%;
     height: 70px;
     padding: 0 20px 0 20px;
+    position: fixed;
 `;
 
 const Title = styled.Text`

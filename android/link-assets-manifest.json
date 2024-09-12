@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/NerkoOne-Regular.ttf",
+      "sha1": "16497010793175991f7ebfecd21eb091b122b9e8"
+    },
+    {
       "path": "assets/fonts/PlaywriteCU-ExtraLight.ttf",
       "sha1": "8c1039306d0c92c4798bbb3f4592d7a58b7af73b"
     },

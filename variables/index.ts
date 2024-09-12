@@ -2,6 +2,7 @@ const variables = {
     // fontes
     primaryFont: 'Poppins',
     secondaryFont: 'PlaywriteCU-Regular',
+    terciaryFont: 'NerkoOne-Regular',
 
     // cores
     white: '#fcfcfc',
