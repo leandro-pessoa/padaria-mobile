@@ -1,38 +1,30 @@
 // componentes
-import { StyledFlatList, StyledImage, StyledView } from './styles';
+import { StyledFlatList, StyledText } from './styles';
 import React from 'react';
+import ProductView from './ProductView/indext';
 
-// json
-import DATA from '../../json/products.json';
-import CommonText from '../CommonText';
+// data
+import { products } from '../../data/products';
 
 // tipagens externas
 import { IProduct } from '../../interfaces/IProduct';
-import { Image, ListRenderItemInfo, View } from 'react-native';
-
-const Teste = (ur) => {
-    return (
-        <View>
-            <StyledImage source={{uri: ur}}/>
-        </View>
-    )
-}
+import { ListRenderItemInfo } from 'react-native';
 
 const Products = () => {
     return (
-        <StyledFlatList
-            data={DATA.products}
-            keyExtractor={(item: IProduct) => item.title}
-            renderItem={({ item }: ListRenderItemInfo<IProduct>) => (
-                <StyledView>
-                    <Teste
-                        ur={item.image}
-                    />
-                    <CommonText>{item.title}</CommonText>
-                    <CommonText>{item.price}</CommonText>
-                </StyledView>
-            )}
-        />
+        <>
+            <StyledText>
+                Nossos produtos
+            </StyledText>
+            <StyledFlatList
+                data={products}
+                keyExtractor={(item: IProduct) => item.title}
+                renderItem={({ item }: ListRenderItemInfo<IProduct>) => (
+                    <ProductView {...item}/>
+                )}
+                scrollEnabled={false}
+            />
+        </>
     );
 };
 

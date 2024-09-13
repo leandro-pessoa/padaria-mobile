@@ -1,16 +1,20 @@
 // funções
 import styled from 'styled-components/native';
 
-const StyledFlatList = styled.FlatList`
-    
+// variaveis
+import { variables } from '../../variables';
+
+const StyledText = styled.Text`
+    font-size: 20px;
+    color: ${(props) => props.theme.colors.fontColor};
+    margin: 20px;
+    padding-left: 20px;
+    font-family: ${variables.secondaryFont};
+    border: 2px solid ${variables.primaryColor};
 `;
 
-const StyledView = styled.View``;
+const StyledFlatList = styled.FlatList`
+    margin: 0 20px 0 20px;
+`;
 
-const StyledImage = styled.Image`
-    width: 100px;
-    height: 100px;
-    
-`
-
-export { StyledFlatList, StyledView, StyledImage };
+export { StyledFlatList, StyledText };

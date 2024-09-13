@@ -6,7 +6,7 @@ const variables = {
 
     // cores
     white: '#fcfcfc',
-    blue: '#5d5de4',
+    primaryColor: '#c9ac08',
     lightGray: '#d4d4d4',
     regularGray: '#4f5055',
     darkGray: '#2c2d31',

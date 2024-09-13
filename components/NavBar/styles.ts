@@ -7,7 +7,7 @@ import { variables, flex } from '../../variables';
 const StyledView = styled.View`
     ${flex('row', 'space-around')}
     position: fixed;
-    background-color: ${variables.blue};
+    background-color: ${variables.primaryColor};
     padding: 15px;
 `;
 
