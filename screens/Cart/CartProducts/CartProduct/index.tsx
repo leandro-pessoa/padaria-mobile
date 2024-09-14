@@ -1,24 +1,22 @@
 // funções
-import { formattedPrice } from '../../../utils/formattedPrice';
+import { formattedPrice } from '../../../../utils/formattedPrice';
 
 // componentes
 import {
-    StyledView,
+    ButtonView,
+    Price,
     StyledImage,
+    StyledView,
     TextView,
     Title,
-    Price,
-    ButtonView,
-} from './styles';
+} from '../../../../styles/Product/styles';
+import RemoveButton from './RemoveButton';
 import React from 'react';
-import AddProduct from './AddProduct';
 
 // tipagens externas
-import { IProduct } from '../../../interfaces/IProduct';
+import { IProduct } from '../../../../interfaces/IProduct';
 
-
-
-const ProductView = ({ image, title, price }: IProduct) => {
+const CartProduct = ({ id, image, title, price }: IProduct) => {
     return (
         <StyledView>
             <StyledImage source={image} />
@@ -27,10 +25,10 @@ const ProductView = ({ image, title, price }: IProduct) => {
                 <Price>{formattedPrice(price)}</Price>
             </TextView>
             <ButtonView>
-                <AddProduct image={image} title={title} price={price}/>
+                <RemoveButton id={id} />
             </ButtonView>
         </StyledView>
     );
 };
 
-export default ProductView;
+export default CartProduct;

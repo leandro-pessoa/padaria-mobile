@@ -2,7 +2,7 @@
 import styled from 'styled-components/native';
 
 // variaveis
-import { flex, variables } from '../../../variables';
+import { flex, variables } from '../../variables';
 
 const StyledView = styled.View`
     position: relative;
@@ -42,11 +42,4 @@ const ButtonView = styled.View`
     right: 0;
 `;
 
-export {
-    StyledView,
-    StyledImage,
-    TextView,
-    Title,
-    Price,
-    ButtonView,
-};
+export { StyledView, StyledImage, TextView, Title, Price, ButtonView };

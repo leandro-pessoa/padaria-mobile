@@ -5,7 +5,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-native';
 
 // ícones
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const NavBar = () => {
@@ -14,25 +13,18 @@ const NavBar = () => {
     return (
         <StyledView>
             <TouchableHighlight>
-                <Link to="/">
-                    <MaterialIcon
-                        name={pathname === '/' ? 'home' : 'google-home'}
+                <Link to="/" underlayColor="transparent">
+                    <MaterialCommunityIcon
+                        name={pathname === '/' ? 'home' : 'home-outline'}
                         size={30}
                         color="#fff"
                     />
                 </Link>
             </TouchableHighlight>
             <TouchableHighlight>
-                <MaterialIcon
-                    name="add-circle-outline"
-                    size={30}
-                    color="#fff"
-                />
-            </TouchableHighlight>
-            <TouchableHighlight>
-                <Link to="/cart">
+                <Link to="/cart" underlayColor="transparent">
                     <MaterialCommunityIcon
-                        name="cart-outline"
+                        name={pathname === '/cart' ? 'cart' : 'cart-outline'}
                         size={30}
                         color="#fff"
                     />

@@ -2,7 +2,7 @@
 import styled from 'styled-components/native';
 
 // variaveis
-import { variables } from '../../../../variables';
+import { variables } from '../../../../../variables';
 
 const StyledTouchableOpacity = styled.TouchableOpacity`
     background-color: ${variables.primaryColor};

@@ -1,6 +1,6 @@
 // funções
-import { useAppDispatch } from '../../../../features/hooks';
-import { addProductInCart } from '../../../../features/reducers/product';
+import { useAppDispatch } from '../../../../../features/hooks';
+import { addProductInCart } from '../../../../../features/reducers/product';
 import uuid from 'react-native-uuid';
 
 // componentes
@@ -11,10 +11,10 @@ import React from 'react';
 import IonIcon from 'react-native-vector-icons/Ionicons';
 
 // variaveis
-import { variables } from '../../../../variables';
+import { variables } from '../../../../../variables';
 
 // tipagens externas
-import { IProduct } from '../../../../interfaces/IProduct';
+import { IProduct } from '../../../../../interfaces/IProduct';
 
 // tipagens dos props
 interface AddProductProps {

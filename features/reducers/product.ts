@@ -23,7 +23,7 @@ const productSlice = createSlice({
         addProductInCart: (state, action: PayloadAction<IProduct>) => {
             state.cart = [...state.cart, action.payload];
         },
-        removeProductFromCart: (state, action: PayloadAction<string>) => {
+        removeProductFromCart: (state, action: PayloadAction<string | number[]>) => {
             state.cart = state.cart.filter(
                 (product) => product.id !== action.payload
             );
@@ -35,7 +35,7 @@ const productSlice = createSlice({
 export const productReducer = productSlice.reducer;
 
 // export das actions
-export const { addProductInCart } = productSlice.actions;
+export const { addProductInCart, removeProductFromCart } = productSlice.actions;
 
 // export dos states
 export const selectCart = (state: RootState) => state.product.cart;

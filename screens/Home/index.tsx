@@ -1,7 +1,7 @@
 // componentes
 import { ScrollView } from 'react-native';
-import Banner from '../../components/Banner';
-import Products from '../../components/Products';
+import Banner from './Banner';
+import Products from './Products';
 import React from 'react';
 
 const Home = () => {

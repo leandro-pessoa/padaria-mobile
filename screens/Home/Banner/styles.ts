@@ -2,7 +2,7 @@
 import styled from 'styled-components/native';
 
 // variáveis
-import { variables, flex } from '../../variables';
+import { variables, flex } from '../../../variables';
 
 const StyledImageBackground = styled.ImageBackground`
     ${flex('column', 'center', 'flex-start')}

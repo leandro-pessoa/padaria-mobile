@@ -13,8 +13,4 @@ const StyledText = styled.Text`
     border: 2px solid ${variables.primaryColor};
 `;
 
-const StyledFlatList = styled.FlatList`
-    margin: 0 20px 0 20px;
-`;
-
-export { StyledFlatList, StyledText };
+export { StyledText };
